@@ -13,5 +13,5 @@ export const productos = [
     { nombre: "Cheesecake", precio:0 ,categoria: "Tortas", tipo: "pedido", imagen: "cheesecake-fresa.jpeg" },
     { nombre: "Cupcakes", precio:0 ,categoria: "Tortas", tipo: "pedido", imagen: "cupcake.jpeg" },
     //{ nombre: "Galletas c/glaseado", precio:0 ,categoria: "Tortas", tipo: "pedido", imagen: "default.png" },
-
+    
 ];

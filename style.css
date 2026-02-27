@@ -120,7 +120,8 @@ h2.seccion-titulo {
 #whatsapp-section {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    margin: auto;
+    margin-top: 40px;
 }
 
 .btn-whatsapp {
@@ -145,12 +146,21 @@ h2.seccion-titulo {
 
 /* Si quieres que flote en una esquina, usa este estilo en su lugar */
 /*
-*/
 @media (max-width: 768px) {
     .btn-whatsapp {
         position: fixed;
         bottom: 20px;
         right: 20px;
+        z-index: 1000;
+    }
+    
+}
+*/
+@media (max-width: 768px) {
+    .btn-whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: auto;
         z-index: 1000;
     }
     

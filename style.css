@@ -78,7 +78,7 @@ h2.seccion-titulo {
 
 .producto-card:hover { transform: translateY(-5px); }
 
-.imagen-contenedor {
+.imagen-contenedor, .boton-carrusel{
     background-color: #fdfdfd;
     height: 180px;
     border-radius: 15px;
@@ -88,7 +88,19 @@ h2.seccion-titulo {
     justify-content: center;
 }
 
-.imagen-contenedor img { max-height: 100%; border-radius: 10px; }
+.imagen-contenedor img, .boton-carrusel{ max-height: 100%; border-radius: 10px; }
+.boton-carrusel {
+    display: flex;
+    background-color: var(--celeste);
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+    min-width: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
 
 .precio-tag {
     background-color: var(--rosa);
@@ -107,6 +119,12 @@ h2.seccion-titulo {
     border-radius: 10px;
 }
 
+#carrusel{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 10px;
+}
 /* Filtros */
 #buscador {
     width: 100%;

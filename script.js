@@ -59,3 +59,54 @@ buscador.oninput = () => {
 
 // Carga Inicial
 renderizar(productos);
+let a = 2;
+let b = 6;
+let galeria = productos.slice(a,b);
+let carrusel = document.getElementById("carrusel");
+
+function renderizarCarrusel(lista){
+    carrusel.innerHTML = "";
+    let btnIzq = document.createElement("div");
+    let btnDer = document.createElement("div");
+    btnIzq.className = btnDer.className = "boton-carrusel";
+    carrusel.appendChild(btnIzq);
+    for(let element of galeria){
+        const rutaImagen = element.imagen? `img/${element.imagen}` : "img/default.png";
+        carrusel.innerHTML += `
+        <div class="producto-card">
+            <div class="imagen-contenedor">
+                <img src="${rutaImagen}" alt="${element.nombre}">
+            </div>
+        </div>  
+            `
+    }
+    carrusel.appendChild(btnDer);
+}
+
+renderizarCarrusel(galeria);
+
+carrusel.addEventListener("click",(e)=>{
+
+    if(!e.target.classList.contains("boton-carrusel")) return;
+    const botones = document.querySelectorAll(".boton-carrusel");
+    if(e.target == botones[0]){
+        a--;
+        b--;
+        if(a<0){
+            b = productos.length;
+            a = b - 4;
+        }
+    }
+    if(e.target == botones[1]){
+        a++;
+        b++;
+        if(b>productos.length){
+            a = 0;
+            b = a+4;
+        }
+    }
+    galeria = productos.slice(a,b);
+    
+    renderizarCarrusel(galeria);
+    
+});

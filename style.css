@@ -147,6 +147,18 @@ h2.seccion-titulo {
     margin: auto;
     margin-top: 40px;
 }
+@media (max-width: 768px) {
+    .recorrido-boton{
+        position: relative; /* No ocupa espacio real para no empujar el diseño */
+        margin-top: -140px; /* Lo subimos para que no deje un hueco blanco gigante */
+         /* Un poco de espacio debajo para que no quede pegado al siguiente contenido */
+    }
+}
+@media (min-width: 768px) {
+    .stycky{
+        display: none;
+    }
+}
 
 .btn-whatsapp {
     background-color: var(--dorado); /* Color oficial de WhatsApp */
@@ -182,11 +194,15 @@ h2.seccion-titulo {
 }
 */
 @media (max-width: 768px) {
-    .btn-whatsapp {
-        position: fixed;
-        bottom: 20px;
+    #whatsapp-section {
+        position: sticky;
+        top: 85vh;
         right: auto;
         z-index: 1000;
+        pointer-events: none;
+    }
+    .btn-whatsapp{
+        pointer-events: auto;
     }
     
 }

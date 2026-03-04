@@ -12,6 +12,11 @@ body{
     color: var(--marron);
     margin: 0;
 }
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
 /* h1,h2,h3 {
     color: var(--marron);
     margin-top: 0;
@@ -22,7 +27,7 @@ header {
     background-position: center;
     padding: 2rem;
     text-align: center;
-    border-bottom: 5px solid var(--marron);    
+    border-bottom: 5px solid var(--dorado);    
 }
 header p {
     font-size: min(2rem, 6vw);
@@ -52,7 +57,7 @@ section {
     margin: auto;
 }
 .borde-bajo{
-    border-bottom: 2px solid var(--marron);    
+    border-bottom: 2px solid var(--dorado);    
 }
 
 h2.seccion-titulo {
@@ -136,7 +141,7 @@ h2.seccion-titulo {
     width: 100%;
     padding: 12px;
     border-radius: 25px;
-    border: 2px solid var(--marron);
+    border: 2px solid var(--dorado);
     margin-top:25px;
     margin-bottom: 0px;
 }
@@ -147,19 +152,6 @@ h2.seccion-titulo {
     margin: auto;
     margin-top: 40px;
 }
-@media (max-width: 768px) {
-    .recorrido-boton{
-        position: relative; /* No ocupa espacio real para no empujar el diseño */
-        margin-top: -140px; /* Lo subimos para que no deje un hueco blanco gigante */
-         /* Un poco de espacio debajo para que no quede pegado al siguiente contenido */
-    }
-}
-@media (min-width: 768px) {
-    .stycky{
-        display: none;
-    }
-}
-
 .btn-whatsapp {
     background-color: var(--dorado); /* Color oficial de WhatsApp */
     color: var(--marron);
@@ -174,26 +166,13 @@ h2.seccion-titulo {
     align-items: center;
     gap: 10px;
 }
-
 .btn-whatsapp:hover {
     background-color: #25D366;
     color: var(--crema);
     transform: scale(1.05); /* Se ag;randa un poquito al pasar el mouse */
 }
 
-/* Si quieres que flote en una esquina, usa este estilo en su lugar */
-/*
-@media (max-width: 768px) {
-    .btn-whatsapp {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-    }
-    
-}
-*/
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
     #whatsapp-section {
         position: sticky;
         top: 85vh;
@@ -204,5 +183,36 @@ h2.seccion-titulo {
     .btn-whatsapp{
         pointer-events: auto;
     }
+    .recorrido-boton{
+        position: relative; /* No ocupa espacio real para no empujar el diseño */
+        margin-top: -140px; /* Lo subimos para que no deje un hueco blanco gigante */
+         /* Un poco de espacio debajo para que no quede pegado al siguiente contenido */
+    }
     
+/* } */
+/*@media (min-width: 768px) {
+    .stycky{
+        display: none;
+    }
+}*/
+footer{
+    background-color: var(--dorado);
+    color: var(--crema);
+    text-decoration: none;
+    padding: 1rem 0 0.2rem 0;
+
+}
+footer p{
+    text-align: center;
+}
+/* !Por ahora no hace nada, per no borrar los footer */
+footer a{
+    font-size: 0.8rem;
+    color: var(--crema);
+    text-decoration: none;
+    font-weight: bold;
+}
+footer li{
+    list-style: none;
+    margin: 10px 0;
 }

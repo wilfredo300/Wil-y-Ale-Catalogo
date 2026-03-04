@@ -11,7 +11,7 @@ function crearCard(prod) {
     
     const infoStock = prod.tipo === 'hoy' 
         ? `<p class="stock-hoy">Disponible hoy` 
-        : `<p class="stock-hoy" style="background:#fff3e0; color:#ef6c00;">Bajo pedido</p>`;
+        : `<p class="stock-hoy bajo-pedido">Bajo pedido</p>`;
 //: ${prod.stock} unid.</p> esto iba en hace 2 lineas
     card.innerHTML = `
         <div class="imagen-contenedor">

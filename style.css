@@ -1,46 +1,41 @@
 :root {
-    --celeste: #b2e2f2;
-    --rosa: #f9c5d5;
-    --marron: #8d6e63;
-    --crema: #fff5f8;
-    --texto: #4e342e;
+    --rosa: #fbd9dc;
+    --marron: #8b5328;
+    --crema: #fdfaf5;
+    --dorado: #c9a46d;
 }
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
-    background: linear-gradient(135deg, var(--rosa), var(--crema), var(--rosa));
-
-    color: var(--texto);
+    /* background: linear-gradient(135deg, var(--rosa), var(--crema), var(--rosa));*/
+    background: var(--crema);
+    color: var(--marron);
     margin: 0;
 }
-
+/* h1,h2,h3 {
+    color: var(--marron);
+    margin-top: 0;
+} */
 header {
-    background-image: url('img/fondo.jpg');
+    background-color: var(--rosa);
     background-size: contain;
     background-position: center;
     padding: 2rem;
     text-align: center;
-    border-bottom: 5px solid var(--marron);
-    
+    border-bottom: 5px solid var(--marron);    
 }
 header p {
-    font-size: 2rem;
+    font-size: min(2rem, 6vw);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     margin: 0.5rem 0 0;
-    color: var(--texto);
+    color: var(--marron);
 }
 
 .logo-placeholder {
-    width: 120px;
-    height: 120px;
-    background-color: white;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid var(--marron);
+    width: min(400px, 100%);
+    height: auto;
+    margin: 0 auto;
+    border: none;
     font-weight: bold;
     color: var(--marron);
     overflow: hidden;
@@ -48,10 +43,17 @@ header p {
 
 .logo-placeholder img { width: 100%; height: auto; }
 
-h1 { font-family: 'Brush Script MT', cursive; font-size: 3rem; margin: 0; color: var(--text); }
-
+/* h1 { font-family: 'Brush Script MT', cursive; font-size: 3rem; margin: 0; color: var(--text); }
+ */
 /* Secciones */
-section { padding: 20px; max-width: 1200px; margin: auto; }
+section { 
+    padding: 20px; 
+    max-width: 1200px;
+    margin: auto;
+}
+.borde-bajo{
+    border-bottom: 2px solid var(--marron);    
+}
 
 h2.seccion-titulo {
     border-left: 5px solid var(--rosa);
@@ -67,7 +69,7 @@ h2.seccion-titulo {
 }
 
 .producto-card {
-    background: white;
+    background: var(--rosa);
     border-radius: 20px;
     padding: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -79,7 +81,7 @@ h2.seccion-titulo {
 .producto-card:hover { transform: translateY(-5px); }
 
 .imagen-contenedor, .boton-carrusel{
-    background-color: #fdfdfd;
+    background-color: var(--rosa);
     height: 180px;
     border-radius: 15px;
     margin-bottom: 10px;
@@ -118,6 +120,10 @@ h2.seccion-titulo {
     padding: 2px 10px;
     border-radius: 10px;
 }
+.stock-hoy.bajo-pedido{
+    background: var(--crema); 
+    color:#ef6c00;
+}
 
 #carrusel{
     display: flex;
@@ -130,7 +136,7 @@ h2.seccion-titulo {
     width: 100%;
     padding: 12px;
     border-radius: 25px;
-    border: 2px solid var(--celeste);
+    border: 2px solid var(--marron);
     margin-top:25px;
     margin-bottom: 0px;
 }
@@ -143,8 +149,8 @@ h2.seccion-titulo {
 }
 
 .btn-whatsapp {
-    background-color: #25d366; /* Color oficial de WhatsApp */
-    color: white;
+    background-color: var(--dorado); /* Color oficial de WhatsApp */
+    color: var(--marron);
     padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
@@ -158,8 +164,9 @@ h2.seccion-titulo {
 }
 
 .btn-whatsapp:hover {
-    background-color: #128c7e;
-    transform: scale(1.05); /* Se agranda un poquito al pasar el mouse */
+    background-color: #25D366;
+    color: var(--crema);
+    transform: scale(1.05); /* Se ag;randa un poquito al pasar el mouse */
 }
 
 /* Si quieres que flote en una esquina, usa este estilo en su lugar */
